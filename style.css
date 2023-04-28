@@ -16,3 +16,14 @@ body{
     background-color: aqua;
 }
 
+
+/* #to, #from, #questions-count{
+    width: 40px;
+} */
+
+#select-questions{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
