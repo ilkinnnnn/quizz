@@ -10,7 +10,7 @@ const trueCountInfo = document.getElementById('true-counter')
 const wrongCountInfo = document.getElementById('wrong-counter')
 
 const FROM = sessionStorage.getItem('from') - 1
-const TO = sessionStorage.getItem('to') - 1 
+const TO = sessionStorage.getItem('to') 
 const COUNT = sessionStorage.getItem('count')
 const QUESTIONS = JSON.parse(sessionStorage.getItem('questions'))
 
