@@ -64,6 +64,13 @@ function showQuestion(question){
     wrongCountInfo.innerHTML = index - trueCount
 
     for(let opt of [optionADiv, optionBDiv, optionCDiv, optionDDiv, optionEDiv]){
+        if(opt.dataset.isTrue == 'true'){
+            console.log('ok')
+            opt.removeEventListener('click', trueOptCallBack)
+        } else {
+            opt.removeEventListener('click', wrongOptCallBack)
+        }
+
         opt.dataset.isTrue = false
         opt.style.backgroundColor = 'rgb(255, 253, 240)'
     }
@@ -107,7 +114,7 @@ function trueOptCallBack (e) {
 
     answered = true
 
-    e.target.removeEventListener('click', trueOptCallBack)
+    // e.target.removeEventListener('click', trueOptCallBack)
 }
 
 
@@ -121,5 +128,5 @@ function wrongOptCallBack (e) {
 
     answered = true
 
-    e.target.removeEventListener('click', wrongOptCallBack)
+    // e.target.removeEventListener('click', wrongOptCallBack)
 }
